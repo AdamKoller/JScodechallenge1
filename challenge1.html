@@ -6,16 +6,40 @@
   </head>
   <body>
     <h3>Code Challenge 1</h3>
-    <!--
+    <p style='font-size:28px;'>
     Adam went to three different restuarants. The bills
-    were $104,$57, and $228. He decides the tip under 3 conditions:
+    were $104,$47, and $228. He decides the tip under 3 conditions:
+    </p>
+    <p style='font-size:20px;'>
       - 20% if bill is less than $50
+      <br>
       - 15% if bill is between $50-$200
+      <br>
       - 10% if bill is greater than $200
-
+    </p>
     Create:
     1) an array with all three tip values for the given bill
     2) an array with all three FINAL amounts(bill+tip)
-    -->
+  </p>
+
+    <script>
+    function tipCalc(bill) {
+      var percent;
+      if (bill < 50) {
+        percent = .20;
+      } else if (bill >= 50 && bill < 200) {
+        percent = .15;
+      } else {
+        percent = .10;
+      }
+      return percent * bill;
+    }
+    document.write(tipCalc(104));
+      document.write('---------');
+    document.write(tipCalc(47));
+      document.write('---------');
+    document.write(tipCalc(228));
+
+    </script>
   </body>
 </html>
