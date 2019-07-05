@@ -34,12 +34,16 @@
       }
       return percent * bill;
     }
-    document.write(tipCalc(104));
-      document.write('---------');
-    document.write(tipCalc(47));
-      document.write('---------');
-    document.write(tipCalc(228));
-
+    var bills = [104,47,228];
+    var tips = [tipCalc(bills[0]),
+                tipCalc(bills[1]),
+                tipCalc(bills[2])];
+    var total = [bills[0] + tips[0],
+                 bills[1] + tips[1],
+                 bills[2] + tips[2]];
+    document.write(tips);
+      document.write('----------');
+    document.write(total);
     </script>
   </body>
 </html>
